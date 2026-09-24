@@ -1,0 +1,6 @@
+{
+  "extends": "@glebia/config/typescript/node.json",
+  "compilerOptions": { "declaration": true, "noEmit": false },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules", "test"]
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "@glebia/config/typescript/node.json",
+  "compilerOptions": { "declaration": true, "noEmit": false }
+}
