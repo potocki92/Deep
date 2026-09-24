@@ -1,6 +1,5 @@
 {
-  "extends": "@glebia/config/typescript/node.json",
-  "compilerOptions": { "declaration": true, "noEmit": false },
-  "include": ["src/**/*.ts"],
-  "exclude": ["dist", "node_modules", "test"]
+  "extends": "@glebia/config/typescript/pure.json",
+  "compilerOptions": { "rootDir": "." },
+  "include": ["src/**/*.ts", "test/**/*.ts", "vitest.config.ts"]
 }

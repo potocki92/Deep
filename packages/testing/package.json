@@ -3,11 +3,25 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "exports": "./vitest.config.ts",
+  "exports": {
+    "types": "./src/vitest.config.ts",
+    "default": "./dist/vitest.config.js"
+  },
+  "types": "./src/vitest.config.ts",
   "files": [
-    "vitest.config.ts"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
-    "vitest": "^3.2.4"
+    "@glebia/config": "workspace:*",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "vitest": "^4.0.0"
   }
 }

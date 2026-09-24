@@ -1,4 +1,7 @@
 {
-  "extends": "@glebia/config/typescript/node.json",
-  "compilerOptions": { "declaration": true, "noEmit": false }
+  "extends": "@glebia/config/typescript/browser.json",
+  "compilerOptions": {
+    "rootDir": "src"
+  },
+  "include": ["src/**/*.ts"]
 }

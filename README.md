@@ -4,7 +4,7 @@ GŁĘBIA is a long-term grimdark 2D RPG project centered on deterministic tactic
 
 ## Prerequisites
 
-- Node.js 22 LTS or newer (supported majors are declared in `package.json`; `.nvmrc` selects Node 22)
+- Node.js 24 Active LTS (`.nvmrc` selects the supported runtime)
 - pnpm 10.28.1 (activate with `corepack enable`)
 
 ## Setup and development
@@ -48,7 +48,7 @@ Install Playwright's Chromium browser once before local end-to-end testing with 
 
 The server will be authoritative. Gameplay rules belong only in `packages/game-core`; clients will submit intentions and render resulting events. Frameworks, browser APIs, persistence, queues, and content definitions must not leak into that package. See [the architecture guide](docs/ARCHITECTURE.md) and [ADR 0001](docs/adr/0001-phase-0-foundation.md).
 
-CI installs workspace dependencies, checks formatting, lint and types, runs unit tests, builds the workspace, and runs the Playwright smoke test. See [testing](docs/TESTING.md) for details.
+CI is configured for frozen-lockfile installation, then checks formatting, lint and types, runs unit tests, builds the workspace, and runs the Playwright smoke test. See [testing](docs/TESTING.md) for details.
 
 ## Phase 0 status
 

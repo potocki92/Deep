@@ -1,7 +1,5 @@
 {
   "extends": "@glebia/config/typescript/node.json",
-  "compilerOptions": {
-    "rootDir": "."
-  },
-  "include": ["vitest.config.ts"]
+  "compilerOptions": { "rootDir": "src" },
+  "include": ["src/**/*.ts"]
 }

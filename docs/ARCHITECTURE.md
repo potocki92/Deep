@@ -22,3 +22,7 @@ Applications may depend on packages. Infrastructure packages may eventually adap
 - `testing`: shared Vitest defaults only.
 
 Environment values are opt-in during Phase 0. Server secrets must never use `NEXT_PUBLIC_`; browser values must use that prefix and may not contain secrets.
+
+## Runtime-specific TypeScript boundaries
+
+Shared compiler policy is split into strict `base`, framework-independent `pure`, server-side `node`, browser-only `browser`, and Next.js configurations. Pure packages receive neither Node nor DOM ambient globals. Node packages explicitly declare `@types/node`; browser packages receive DOM libraries without Node globals. Game-core uses a separate build configuration so tests are typechecked and linted but never emitted.
