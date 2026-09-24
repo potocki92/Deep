@@ -1,0 +1,5 @@
+{
+  "extends": "@glebia/config/typescript/pure.json",
+  "compilerOptions": { "rootDir": "." },
+  "include": ["src/**/*.ts", "test/**/*.ts", "vitest.config.ts"]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@glebia/game-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@glebia/config": "workspace:*",
+    "@glebia/testing": "workspace:*",
+    "typescript": "^5.9.2",
+    "vitest": "^4.0.0"
+  }
+}

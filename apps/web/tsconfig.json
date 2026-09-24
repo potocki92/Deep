@@ -1,0 +1,1 @@
+{ "extends": "@glebia/config/typescript/nextjs.json" }
